@@ -1,23 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Card.module.css'
 
-const Card = ({ href, src, nome, alt, handleClick }) => {
+const Card = ({ to, src, nome, descricao, handleClick }) => {
   return (
-    <a 
-      className={styles.card}
-      href={href}
-      onClick={handleClick}>
-      <img
-        className={styles.img}
-        src={src}
-        alt={alt}>
+    <Link to={to} className={styles.card} onClick={handleClick}>
+      <img src={src} alt={descricao} className={styles.img}>
       </img>
-      <h2
-        className={styles.texto}>
-        {nome}
-      </h2>
-    </a>
-  )
-}
+      <h2 className={styles.titulo}>{nome}</h2>
+    </Link>  
+  );
+};
 
 export default Card

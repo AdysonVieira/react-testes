@@ -1,0 +1,12 @@
+.card {
+    max-width: 300px;
+}
+
+.img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.texto {
+    text-decoration: none;
+}

@@ -1,0 +1,31 @@
+.container {
+    padding-inline: 32px;
+}
+
+.content {
+    display: flex;
+    gap: 32px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.info {
+    justify-content: flex-start ;
+}
+
+.preco {
+    padding: 8px;
+    background-color: #00ff4c;
+    color: #025c1d;
+    border-radius: 5px;
+
+}
+
+.descricao {
+    width: 30ch;
+}
