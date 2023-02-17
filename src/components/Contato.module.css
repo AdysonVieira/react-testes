@@ -1,10 +1,7 @@
-.container {
-    padding-inline: 32px;
-}
-
 .content {
-    display: flex;
-    gap: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 .img {

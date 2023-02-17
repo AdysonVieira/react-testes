@@ -15,28 +15,24 @@ const Produto = () => {
     setLoading(false)
   }, [location])
 
-  if (loading) {
-    return <p>Carregando...</p>
-  }
-  if (data) {
-    return (
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <img
-            src={data.fotos[0].src}
-            className={styles.img}
-            alt={data.descricao}>
-          </img>
-          <div className={styles.info}>
-            <h3 className={styles.titulo}>{data && data.nome}</h3>
-            <h4 className={styles.preco}>R$ {data.preco}</h4>
-            <p className={styles.descricao}>{data.descricao}</p>
-          </div>
+  if (loading) return <div className="loading"></div>
+  if (data === null) return null 
   
-        </div>
+  return (
+    <div className={styles.content}>
+      <img
+        src={data.fotos[0].src}
+        className={styles.img}
+        alt={data.descricao}>
+      </img>
+      <div className={styles.info}>
+        <h3 className={styles.titulo}>{data && data.nome}</h3>
+        <span className={styles.preco}>R$ {data.preco}</span>
+        <p className={styles.descricao}>{data.descricao}</p>
       </div>
-    )
-  }
+    </div>
+  )
+  
 }
 
 export default Produto

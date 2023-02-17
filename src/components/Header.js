@@ -4,10 +4,16 @@ import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <div className={styles.container}>
-      <nav className={styles.nav}>
-        <NavLink to='produto' className={styles.item}>Produtos</NavLink>
-        <NavLink to='contato' className={styles.item}>Contato</NavLink>
+    <div>
+      <nav>
+        <ul className={styles.nav}>
+          <li>
+            <NavLink to='produto' className={styles.item}>Produtos</NavLink>
+          </li>
+          <li>
+            <NavLink to='contato' className={styles.item}>Contato</NavLink>
+          </li>
+        </ul>
       </nav>
     </div>
   )

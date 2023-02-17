@@ -1,7 +1,3 @@
-.container {
-    padding-inline: 32px;
-}
-
 .content {
     display: flex;
     gap: 32px;

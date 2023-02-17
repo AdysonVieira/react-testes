@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Produtos.module.css'
 import Card from './Card'
+import Head from './Head'
 
 
 const Produtos = () => {
@@ -12,21 +13,18 @@ const Produtos = () => {
       .then((data) => setProdutos(data))
   }, [])
 
-  console.log(produtos)
-
   return (
-    <section className={styles.container}>
-      <div className={styles.content}>
-        {produtos && produtos.map((produto) => (
-          <Card 
-            key={produto.id}
-            to={produto.id}
-            src={produto.fotos[0].src}
-            nome={produto.nome}
-          />  
-        ))}
-      </div>
-    </section>
+    <div className={`${styles.content} fadeInLeft`}>
+      <Head title="Produtos" description="Página de Produtos"/>
+      {produtos && produtos.map((produto) => (
+        <Card 
+          key={produto.id}
+          to={produto.id}
+          src={produto.fotos[0].src}
+          nome={produto.nome}
+        />  
+      ))}
+    </div>
   )
 }
 

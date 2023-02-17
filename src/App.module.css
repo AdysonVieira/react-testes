@@ -1,0 +1,33 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.fadeInLeft {
+  transform: translate(-30px);
+  opacity: 0;
+  animation: fadeInLeft .3s forwards;
+}
+
+.loading {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-right-color: transparent;
+  animation: loading .1s infinite;
+}
+
+@keyframes fadeInLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
